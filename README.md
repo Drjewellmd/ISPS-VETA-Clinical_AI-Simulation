@@ -122,6 +122,25 @@ Planned next steps include:
 py isps_veta_ml_pilot.py
 
 ```
+## Stage 2: Interpretable Clinical Triage Simulation
+
+We extended the ISPS-VETA simulation to a Stage 2 machine learning framework using an expanded scenario dataset, additional temporal and frequency-related features, and a comparison of Decision Tree and Random Forest models.
+
+New features included:
+- stress trend
+- distress frequency
+
+The Stage 2 system predicts four triage actions:
+- ROUTINE_SUPPORT
+- MONITOR_CLOSELY
+- ACTIVATE_INTERVENTION
+- ESCALATE_TO_HUMAN_CLINICIAN
+
+Because ISPS-VETA is designed for safety-critical behavioral health support, evaluation prioritizes minimizing false negatives in escalation scenarios.
+
+### SHAP Interpretability
+Stage 2 also incorporates **SHAP (Shapley Additive exPlanations)** to identify which behavioral and cognitive features most influenced triage outcomes. This improves model transparency and supports clinician review of escalation decisions within a governance-constrained, human-in-the-loop framework.
+
 ## Project Lead
 
 **Dr. Susan Jewell, MD**  
